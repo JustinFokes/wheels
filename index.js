@@ -5,15 +5,45 @@
  */
 
 function buildTree(){
-    // implement your build tree here.
+  let i = 1
+  const arr = ["x","x","x","x","x","x","x"]
+  while(i <= 7){
+    console.log(arr.slice(0, i).join(""))
+    i++
+  }
 }
 
-// eventually, we'll add a testing framework to be able to make assertions on what should be outputted from the function
-console.log(buildTree())
-
+//buildTree()
 
 function fizzBuzz(){
-    // implement fizzBuzz
+  for(let i = 1; i <= 100; i++){
+    if(i % 15 === 0){
+      console.log("FIZZ BUZZ")
+    } else if(i % 3 === 0){
+      console.log("FIZZ")
+    } else if(i % 5 === 0){
+      console.log("BUZZ")
+    }else {
+      console.log(i)
+    }
+  }
 }
 
-console.log(fizzBuzz())
+//fizzBuzz()
+
+function chessBoard(){
+  let finalStringArr = ["\n"]
+  let oddString = " # # # #\n"
+  let evenString = "# # # # \n"
+  for(let i = 0; i <= 8; i++){
+    if(i % 2 === 0){
+      finalStringArr.push(evenString)
+    } else {
+      finalStringArr.push(oddString)
+    }
+  }
+  console.log(finalStringArr.join(""))
+}
+
+//chessBoard()
+
